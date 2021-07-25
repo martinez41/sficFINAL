@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script  type = "module"  src = "https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" > </script > 
+	<script  nomodule  src = "https://unpkg .com/ionicons@5.5.2/dist/ionicons/ionicons.js" > </script >
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https : //fonts.googleapis.com/css2? family= Maven+Pro:wght@600 & display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/users.css">
+	<link rel= "stylesheet" href= "/home/tdms410/Bureau/TrueProjet/sfic/logo/line-awesome-1.3.0/1.3.0/css/line-awesome.min.css" >
+	<title>Utilisateurs</title>
+</head>
+<!-- tdms410 -->
+<body>
+	<input type="checkbox" id="nav-toggle">
+		<div class="sidebar">
+			<!-- profile image -->
+			<div class="sidebar-brand">
+				<div class="profil">
+					<img src="image/01.jpg" alt="photo_profil" srcset="">
+					<div>
+						<h3 id="nom_profil">tdms410</h3>
+						<small>codeur ;)</small>
+					</div>
+				</div>
+			</div>
+			<!-- menu item -->
+			<div class="sidebar-menu">
+				<ul>
+					<li class="list">
+						<a href="home.html">
+						<span class="las la-tachometer-alt"></span>
+						<span class="item">Tableau de bord</span>
+						</a>
+				</li>
+				<li class="list">
+						<a href="client.html">
+							<span class="las la-address-book"></span>
+							<span class="item">Clients</span>
+						</a>
+				</li>
+				<li class="list">
+					<a href="fournisseur.html">
+							<span class="las la-luggage-cart"></span>
+							<span class="item">Fournisseurs</span>
+					</a>
+				</li>
+				<li class="list" >
+					<a href="users.html" class="active">
+							<span class="las la-users"></span>
+							<span class="item">Utilisateurs</span>
+					</a>
+				</li>
+				<li class="list">
+					<a href="mvt.html">
+						<span class="las la-database"></span>
+						<span class="item">Mouvement stock</span>
+					</a>
+				</li>
+				<li class="list">
+					<a href="rapport.html">
+						<span class="las la-folder-open"></span>
+						<span class="item">Rapports</span>
+					</a>
+				</li>
+				<li class="list" >
+					<a href="login.html">
+						<span class="las la-door-open"></span>
+						<span class="item">Deconnexion</span>
+					</a>
+				</li>
+				</ul>
+			</div>
+			<script>
+				let list = document.querySelectorAll('a');
+					
+				for (let i = 0; i < list.length; i++) {
+					list[i].onclick = function() {
+					let j = 0;
+						while (j < list.length) {
+							list[j++].className = 'list';
+						}
+				list[i].className = 'list active';
+					}
+				}
+			</script>
+		</div>
+
+		<div class="main-content">
+			<header>
+				<h2>
+					<label for="nav-toggle">
+						<span class="las la-bars"></span>
+					</label>
+					 Utilisateurs
+				</h2>
+	
+				<div class="search-wrapper">
+					<span class="las la-search"></span>
+					<input type="search" name="" id="" placeholder="Recherche">
+				</div>
+			</header>
+
+			<main>
+				<div class="op_users">
+					<div class="container">
+					<form action="" method="POST" class="login-user">
+						<p class="login-text" style="font-size: 1.5rem; font-weight: 800; text-align: center;">Operation sur</p>
+						<p class="login-text" style="font-size: 1.5rem; font-weight: 800; text-align: center;">Utilisateurs</p>
+						<div class="input-group">
+							<input type="text" placeholder="Username" name="username" value="" required>
+						</div>
+						<div class="input-group">
+							<input type="password" placeholder="Password" name="password" value="" required>
+						</div>
+						<div class="input-group">
+							<input type="password" placeholder="Confirm Password" name="cpassword" value="" required>
+						</div>
+						<div class="input-group">
+							<button name="submit" class="btn">Ajouter<span class="las la-user-plus"></span></button>
+							<button name="submit" class="btn">Modifier<span class="las la-user-edit"></span></button>
+							<button name="submit" class="btn">Supprimer<span class="las la-user-minus"></span></button>
+							<!-- <button name="submit" class="btn">Annuler<span class="las la-user-minus"></span></button> -->
+						</div>
+					</form>
+					</div>
+				</div>
+
+				<div class="tab_users">
+						<div class="recent-grid">
+							<div class="projects">
+							<div class="card">
+								<div class="card-header">
+									<h3>Liste d'utilisateur</h3>
+									<button> Actualiser <span class="las la-sync-alt"></span></button>
+								</div>
+
+								<div class="card-body">
+									<table width="100%">
+										<thead>
+											<td>Id</td>
+											<td>Nom</td>
+											<td>Status</td>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>2</td>
+												<td>
+													<div class="status"></div>
+													Magasinnier
+												</td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>21234567890</td>
+												<td>
+													<div class="status"></div>
+													Magasinnier
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								
+							</div>
+							</div>
+						</div>
+				</div>
+			</main>
+		</div>
+</body>
+</html>
